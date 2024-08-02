@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<style>
+    body {
+        background-repeat: no-repeat;
+        background-position: top;
+
+        z-index: 1;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MikuLite</title>
+</head>
+
+<body>
+    <div class="topnav GlassMor InfShadow">
+        <span>&nbsp;&nbsp;</span>
+        <span><img src="Resource/Logo/TouXiang.png" alt="Logo" class="Avater"></span>
+        <span><a href="#"><b class="title">5xian-Site</b></a></span>
+        <span></span>
+    </div>
+    <div class="GlassMor LargeCard oldCenter">
+        <div class="TitleBoard">
+            <span><b class="title">5xian-Site</b></span>
+        </div>
+        <hr>
+        <div class="LeftStackPanel">
+            <a href="https://wobushixia.github.io/5xian-site" target="_blank">
+                <div class="GlassMor MediumCard">
+                    <span class="center"><b>原网站</b></span>
+                    <span class="center"><b>Classic Site</b></span>
+                </div>
+            </a>
+            <a href="OtherTabs/Blog.html">
+                <div class="GlassMor MediumCard">
+                    <span class="center"><b>我的微博</b></span>
+                    <span class="center"><b>My Blog</b></span>
+                </div>
+            </a>
+            <br>
+            <a href="OtherTabs/About.html">
+                <div class="GlassMor MediumCard">
+                    <span class="center"><b>导航站</b></span>
+                    <span class="center"><b>My Nav</b></span>
+                </div>
+            </a>
+            <a href="OtherTabs/About.html">
+                <div class="GlassMor MediumCard">
+                    <span class="center"><b>关于我</b></span>
+                    <span class="center"><b>About Me</b></span>
+                </div>
+            </a>
+        </div>
+        <div class="RightStackPanel">
+            <div class="GlassMor center InfShadow MediumCard Font-NumberFont">
+                <span class="center"><b>Time:</b></span>
+                <br>
+                <span id="time" class="center"></span>
+            </div>
+            <a style="cursor: pointer;">
+                <div class="GlassMor MediumCard InfShadow" onclick="RandomChoose()">
+                    <span class="center"><b>Sentence</b></span>
+                    <span class="center" id="randomSentence"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    // 获取当前时间
+    var currentTime = new Date();
+    var currentHour = currentTime.getHours();
+    // 根据不同时间段设置不同壁纸
+    if (currentHour >= 6 && currentHour < 12) {
+        // 设置上午壁纸
+        document.body.style.backgroundImage = "url('./Resource/Background/MorningBG.png')";
+    } else if (currentHour >= 12 && currentHour < 15) {
+        // 设置下午壁纸
+        document.body.style.backgroundImage = "url('./Resource/Background/AfterNoonBG.jpg')";
+    } else {
+        // 设置晚上壁纸
+        document.body.style.backgroundImage = "url('./Resource/Background/NightBG.png')";
+    }
+</script>
+<script>
+    function updateTime() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateTime, 1000);
+
+    RandomChoose();
+
+    function RandomChoose() {
+        const SentenceList = [
+            "千里之行，始于足下。",
+            "不积跬步，无以至千里。",
+            "机会总是留给有准备的人。",
+            "只要功夫深，铁杵磨成针。",
+            "读书破万卷，下笔如有神。"
+        ];
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        const randomNumber = getRandomInt(1, SentenceList.length - 1);
+        document.getElementById("randomSentence").textContent = `"${SentenceList[randomNumber]}"`
+    }
+</script>
+
+</html>
