@@ -49,12 +49,10 @@ hr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .topnav {
     overflow: hidden;
-    width: 100%;
     /* 设置导航栏宽度为100% */
     position: absolute;
     left: 0;
@@ -103,10 +101,47 @@ a:hover {
 }
 @font-face {
     font-family: "DS-DIGI";
-    src: url("DS-DIGI-1.ttf");
+    src: url("Resource/Font/DS-DIGI-1.ttf");
 }
 .Font-NumberFont {
     font-size: larger;
     font-family: "DS-DIGI";
 }
 
+.sidebar {
+    width: 180px;
+    height: 100vh;
+    color: white;
+    position: fixed;
+    padding: 20px;
+}
+.sidebar h2 {
+    color: #fff;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 20px 0;
+    vertical-align: middle;
+}
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.sidebar ul li a:hover {
+    color: #39c5bb; /* 悬停时的颜色 */
+}
+.content {
+    margin-left: 240px; /* 留出侧边栏的空间 */
+    margin-top: 80px;
+}
+ul.SideBarList li{
+    font-size: medium;
+    font-weight: bolder;
+}
+.sidebarContent{
+    margin-top: 10%;
+}

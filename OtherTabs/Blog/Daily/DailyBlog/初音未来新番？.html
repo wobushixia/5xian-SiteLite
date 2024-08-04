@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MikuLite-BLOG</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav GlassMor InfShadow" style="z-index: 2;">
+        <span>&nbsp;&nbsp;</span>
+        <span><img src="../../../../Resource/Logo/TouXiang.png" alt="Logo" class="Avater"></span>
+        <span><a href="../index.html"><b class="title">5xian-Site</b></a></span>
+        <span></span>
+    </div>
+    <div class="GlassMor oldCenter LargeCard">
+        <h2>初音未来新番？</h2>
+        <hr>
+        <p>emm，“初音未来新番”，或许这样叫不太正确，应该说是<a href="https://zh.moegirl.org.cn/%E4%B8%96%E7%95%8C%E8%AE%A1%E5%88%92_%E5%BD%A9%E8%89%B2%E8%88%9E%E5%8F%B0_feat._%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5">Project Sekai</a>剧场版</p>
+        <p>不管怎样，相信屏幕前的你也和我一样激动，因为时隔17年，终于有一部番是围绕初音未来做剧情。</p>
+        <p>这是视频(BiliBili转载源)</p>
+        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1156270147&bvid=BV16Z421T7G1&cid=1631648560&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+        <p>当我第一次看到的时候超超超激动！即使是目前再看也会起一身鸡皮疙瘩（）</p>
+        <p>让我们期待一下吧（要么夸的最狠，要么骂的最狠）</p>
+    </div>
+</body>
+<script>
+    // 获取当前时间
+    var currentTime = new Date();
+    var currentHour = currentTime.getHours();
+    // 根据不同时间段设置不同壁纸
+    if (currentHour >= 6 && currentHour < 12) {
+        // 设置上午壁纸
+        document.body.style.backgroundImage = "url('../../../../Resource/Background/MorningBG.png')";
+    } else if (currentHour >= 12 && currentHour < 15) {
+        // 设置下午壁纸
+        document.body.style.backgroundImage = "url('../../../../Resource/Background/AfterNoonBG.jpg')";
+    } else {
+        // 设置晚上壁纸
+        document.body.style.backgroundImage = "url('../../../../Resource/Background/NightBG.png')";
+    }
+</script>
+
+</html>

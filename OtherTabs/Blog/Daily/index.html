@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MikuLite-BLOG</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../../style.css">
     <style>
         body {
             margin: 0;
@@ -20,26 +20,27 @@
 <body>
     <div class="topnav GlassMor InfShadow" style="z-index: 2;">
         <span>&nbsp;&nbsp;</span>
-        <span><img src="../Resource/Logo/TouXiang.png" alt="Logo" class="Avater"></span>
-        <span><a href="../index.html"><b class="title">5xian-Site</b></a></span>
+        <span><img src="../../../Resource/Logo/TouXiang.png" alt="Logo" class="Avater"></span>
+        <span><a href="../../Blog.html"><b class="title">5xian-Site</b></a></span>
         <span></span>
     </div>
     <div class="sidebar InfShadow GlassMor">
         <div class="sidebarContent">
             <span>&nbsp;</span>
-            <h2 style="color: #39c5bb;text-align: center;">Blog</h2>
+            <h2 style="color: #39c5bb;text-align: center;">Daily</h2>
             <ul class="SideBarList" style="text-align: center;">
-                <li><a href="Blog/Daily/index.html">Daily</a></li>
-                <li><a href="Blog/Dev/index.html">DevLog</a></li>
+                <li><a href="DailyBlog/初音未来新番？.html">初音未来新番？</a></li>
         </div>
         </ul>
     </div>
     <div class="content GlassMor LargeCard" style="color: #000000cb;position: absolute;
     top: 30%;
     left: 20%;">
-        <h1>Hey,你好,这里是我的Blog</h1>
-        <span>我会在这里存储我的一些文章/动态</span><br><br>
-        <span>点击左上角的"5xian-Site"即可返回<a href="../index.html">"主页"</a></span>
+        <h1>Hey,你好,这里Daily页面</h1>
+        <span>我会在这里存储我的一些动态(你可以理解为QQ动态())</span><br><br>
+        <span>点击左上角的"5xian-Site"即可返回<a href="../../Blog.html">"Blog主页"</a></span>
+        <br><br>
+        <span>你可以在左侧侧边栏选择你想看的动态</span>
     </div>
 </body>
 <script>
@@ -49,13 +50,13 @@
     // 根据不同时间段设置不同壁纸
     if (currentHour >= 6 && currentHour < 12) {
         // 设置上午壁纸
-        document.body.style.backgroundImage = "url('../Resource/Background/MorningBG.png')";
+        document.body.style.backgroundImage = "url('../../../Resource/Background/MorningBG.png')";
     } else if (currentHour >= 12 && currentHour < 15) {
         // 设置下午壁纸
-        document.body.style.backgroundImage = "url('../Resource/Background/AfterNoonBG.jpg')";
+        document.body.style.backgroundImage = "url('../../../Resource/Background/AfterNoonBG.jpg')";
     } else {
         // 设置晚上壁纸
-        document.body.style.backgroundImage = "url('../Resource/Background/NightBG.png')";
+        document.body.style.backgroundImage = "url('../../../Resource/Background/NightBG.png')";
     }
 </script>
 

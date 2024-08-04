@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MikuLite-BLOG</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav GlassMor InfShadow" style="z-index: 2;">
+        <span>&nbsp;&nbsp;</span>
+        <span><img src="../../../../Resource/Logo/TouXiang.png" alt="Logo" class="Avater"></span>
+        <span><a href="../index.html"><b class="title">5xian-Site</b></a></span>
+        <span></span>
+    </div>
+    <div class="GlassMor oldCenter LargeCard">
+
+    </div>
+</body>
+<script>
+    // 获取当前时间
+    var currentTime = new Date();
+    var currentHour = currentTime.getHours();
+    // 根据不同时间段设置不同壁纸
+    if (currentHour >= 6 && currentHour < 12) {
+        // 设置上午壁纸
+        document.body.style.backgroundImage = "url('../../../../Resource/Background/MorningBG.png')";
+    } else if (currentHour >= 12 && currentHour < 15) {
+        // 设置下午壁纸
+        document.body.style.backgroundImage = "url('../../../../Resource/Background/AfterNoonBG.jpg')";
+    } else {
+        // 设置晚上壁纸
+        document.body.style.backgroundImage = "url('../../../../Resource/Background/NightBG.png')";
+    }
+</script>
+
+</html>

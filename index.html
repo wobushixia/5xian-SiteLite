@@ -2,8 +2,11 @@
 <html lang="zh-cn">
 <style>
     body {
+        margin:0;
+        padding:0;
         background-repeat: no-repeat;
         background-position: top;
+        background-size:cover;
 
         z-index: 1;
     }
@@ -23,10 +26,8 @@
         <span><a href="#"><b class="title">5xian-Site</b></a></span>
         <span></span>
     </div>
-    <div class="GlassMor LargeCard oldCenter">
-        <div class="TitleBoard">
-            <span><b class="title">5xian-Site</b></span>
-        </div>
+    <div class="GlassMor LargeCard oldCenter" id="site-window">
+        <span id="site-windowheader"><b class="title">Miku-Lite</b></span>
         <hr>
         <div class="LeftStackPanel">
             <a href="https://wobushixia.github.io/5xian-site" target="_blank">
@@ -105,7 +106,8 @@
             "不积跬步，无以至千里。",
             "机会总是留给有准备的人。",
             "只要功夫深，铁杵磨成针。",
-            "读书破万卷，下笔如有神。"
+            "读书破万卷，下笔如有神。",
+            "不经巨大的困难，不会有伟大的事业。"
         ];
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -114,5 +116,49 @@
         document.getElementById("randomSentence").textContent = `"${SentenceList[randomNumber]}"`
     }
 </script>
+<script>
+    // 使 DIV 元素可拖动:
+dragElement(document.getElementById("site-window"));
 
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // 如果存在，标题是您从中移动 DIV 的位置:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // 否则，从 DIV 内的任何位置移动 DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // 在启动时获取鼠标光标位置:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // 每当光标移动时调用一个函数:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // 计算新的光标位置:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // 设置元素的新位置:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // 释放鼠标按钮时停止移动:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
 </html>
